@@ -1,12 +1,12 @@
 #include <string>;
 #include <vector>;
 
-vector(string) SéparerMots(string phrase) 
+vector(string) SéparerMots(string phrase)
 {
 
 }
 
-main() 
+main()
 {
 
 }
