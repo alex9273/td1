@@ -22,30 +22,21 @@ string DemanderPhrase()
 /// <returns></returns>
 vector<string> SéparerMots(string phrase)
 {
-    // à travailler...
     vector<string> mots;
-    int dernièreEspace = -1;
+    string nouveaumot = "";
     for (int i = 0; i < phrase.size(); ++i)
     {
         if (phrase.at(i) == ' ') 
         {
-
-            // terrible...
-            string nouveaumot = "";
-            for (int j = dernièreEspace + 1; j < i; ++j) 
-            {
-                nouveaumot += phrase.at(j);
-            }
-            dernièreEspace = i;
             mots.push_back(nouveaumot);
+            nouveaumot = "";
+        }
+        else 
+        {
+            nouveaumot += phrase.at(i);
         }
     }
 
-    string nouveaumot = "";
-    for (int j = dernièreEspace + 1; j < phrase.size(); ++j)
-    {
-        nouveaumot += phrase.at(j);
-    }
     mots.push_back(nouveaumot);
 
     return mots;
